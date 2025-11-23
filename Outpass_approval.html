@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpass Requests - Warden Panel</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f7ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2f4f75;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #d6d6d6;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2f4f75;
+            color: white;
+        }
+
+        button {
+            padding: 7px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .approve {
+            background: #0fb60f;
+            color: white;
+        }
+
+        .reject {
+            background: #d32222;
+            color: white;
+        }
+
+        .approve:hover {
+            background: #0d8f0d;
+        }
+
+        .reject:hover {
+            background: #b51d1d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Outpass Approval Panel (Warden)</h1>
+
+    <table>
+        <tr>
+            <th>Request ID</th>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Hostel</th>
+            <th>Room No</th>
+            <th>Reason</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Action</th>
+        </tr>
+
+        <!-- Sample row — replace with backend data -->
+        <tr>
+            <td>101</td>
+            <td>CS24M001</td>
+            <td>Rahul Kumar</td>
+            <td>MSR Gowramma</td>
+            <td>412</td>
+            <td>Going home</td>
+            <td>2025-02-10</td>
+            <td>2025-02-12</td>
+            <td>
+                <form action="/approveOutpass" method="post" style="display:inline;">
+                    <input type="hidden" name="requestId" value="101">
+                    <button class="approve">Approve</button>
+                </form>
+
+                <form action="/rejectOutpass" method="post" style="display:inline;">
+                    <input type="hidden" name="requestId" value="101">
+                    <button class="reject">Reject</button>
+                </form>
+            </td>
+        </tr>
+
+        <!-- additional rows loaded from backend -->
+    </table>
+
+</body>
+</html>

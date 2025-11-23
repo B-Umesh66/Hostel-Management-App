@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Room Request</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="SignUp.css">
+    </head>
+    <body>
+        <h1>Change Room Request</h1>
+        <form action="#" method="post" autocomplete="off">
+            <table>
+                <tr>
+                    <td><label for="Studet_id">Student ID:</label></td>
+                    <td><input type="text" id="student_id" name="student_id" required></td>
+                </tr>
+                <tr>
+                    <td><label for="current_room">Current Room:</label></td>
+                    <td><input type="text" id="current_room" name="current_room" required></td>
+                </tr>
+                <tr>
+                    <td><label for="requested_room">Requested Room</label></td>
+                    <td><input type="text" id="requested_room" name="requested_room" required></td>
+                </tr>
+                <tr>
+                    <td><label for="reason">Reason for Change:</label></td>
+                    <td><textarea id="reason" name="reason" rows="4" cols="30" required></textarea></td>
+                </tr>
+            </table>
+            <a href="StudentPage.html"><input type="submit" value="Submit Request" style="width: 150px;" onclick="alert('Request sent to warden')"></a>
+        </form>
+    </body>
+</html>

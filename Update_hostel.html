@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Hostel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="SignUp.css">
+    </head>
+    <body>
+        <h1>Update Hostel Information</h1>
+        <form action="#" method="post" autocomplete="off">
+            <table>
+                <tr>
+                    <td><label for="hostel_id">Hostel ID:</label></td>
+                    <td><input type="text" id="hostel_id" name="hostel_id" required></td>
+                </tr>
+                <tr>
+                    <td><label for="hostel_name">Hostel Name:</label></td>
+                    <td>
+                        <input list="hostels" name="hostel" id="hostel" placeholder="Select your hostel" required>
+                        <datalist id="hostels">
+                            <option value="Freshers Block">Freshers Block</option>
+                            <option value="Aryabatta Block">Aryabatta Block</option>
+                            <option value="Ratan Tata Block">Ratan Tata Block</option>
+                            <option value="MSR Gowramma">MSR Gowramma</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="current_capacity">Current Capacity:</label></td>
+                    <td><input type="number" id="current_capacity" name="current_capacity" required></td>
+                </tr>
+                <tr>
+                    <td><label for="new_capacity">New Capacity:</label></td>
+                    <td><input type="number" id="new_capacity" name="new_capacity" required></td>
+                </tr>
+            </table>
+            <a href="AdminPage.html"><input type="submit" value="Update Hostel" style="width: 150px;" onclick="alert('Hostel information updated successfully')"></a>
+        </form>
+    </body>
+</html>
