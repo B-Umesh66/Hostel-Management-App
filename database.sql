@@ -5,7 +5,19 @@ CREATE TABLE students (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    email VARCHAR(255) NOT NULL,
+    username VARCHAR(150),
+    phno VARCHAR(25),
+    gender VARCHAR(20),
+    age INT,
+    dob DATE,
+    address TEXT,
+    college_name VARCHAR(255),
+    branch VARCHAR(255),
+    student_id VARCHAR(100),
+    year_of_study VARCHAR(50),
+    hostel VARCHAR(255),
+    room_no VARCHAR(50)
 );
 
 CREATE TABLE admins (

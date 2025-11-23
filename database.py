@@ -6,7 +6,7 @@ def get_db_connection():
         host="localhost",
         user="root",
         password="@Umesh2004",
-        database="hostel_db"
+        database="pythonlogin"
     )
     return connection
 
