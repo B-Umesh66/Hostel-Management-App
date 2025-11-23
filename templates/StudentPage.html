@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Home Page</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename='StudentPage.css') }}">
+    </head>
+    <body>
+        <span class = "welcome-text">WELCOME! {{ session.username }}</span>
+        <div class = "welcome">
+            <div>
+                <p>Name: {{ student.name }}</p>
+                <p>USN: {{ student.student_id }} </p>
+                <p>PhNo: {{ student.phno }}</p>
+            </div>
+            <p><img>IMAGE</p>
+        </div>
+        <div class = "student-information">
+            <p>Hostel Name: {{ student.hostel }}</p>
+            <p>Room: {{ student.room_no }}</p>
+            <p>College name: {{ student.college_name }}</p>
+            <p>Branch: {{ student.branch }}</p>
+        </div>
+        <div class = "utility-buttons">
+            <a href = "{{ url_for('generate_outpass') }}"><button>Outpass Generation</button></a>
+            <a href="{{ url_for('change_room_request') }}"><button>Change Room</button></a>
+            <a href="{{ url_for('change_hostel_request') }}"><button>Change Hostel</button></a>
+        </div>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </body>
+</html>

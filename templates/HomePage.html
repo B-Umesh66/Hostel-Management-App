@@ -39,9 +39,10 @@
     <body>
         <p class="hms">HOSTEL MANAGEMENT SYSTEM</p>
         <div>
-            <a href="StudentLogin.html"><input type="button" id="student_login" value="Student"></a>
-            <a href="AdminLogin.html"><input type="button" id="admin_login" value="Admin"></a>
-            <a href="WardenLogin.html"><input type="button" id="warden_login" value="Warden"></a>
+            <a href="{{ url_for('student_login') }}"><input type="button" id="student_login" value="Student"></a>
+            <a href="{{ url_for('admin_login') }}"><input type="button" id="admin_login" value="Admin"></a>
+            <a href="{{ url_for('warden_login') }}"><input type="button" id="warden_login" value="Warden"></a>
+            <a href="{{ url_for('contact') }}"><input type="button" id="contact" value="Contact Us"></a>
         </div>
     </body>
 </html>

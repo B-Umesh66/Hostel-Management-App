@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Hostel</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Change Hostel Request</h1>
+    <form action="{{ url_for('change_hostel_request') }}" method="post">
+        <label for="new_hostel_name">New Hostel Name:</label>
+        <input type="text" id="new_hostel_name" name="new_hostel_name" required><br><br>
+        <label for="reason">Reason:</label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="msg">{{ msg }}</div>
+    <a href="{{ url_for('student_page') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Wardens</title>
+</head>
+<body>
+    <h1>All Wardens</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Warden ID</th>
+                <th>Hostel</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for warden in wardens %}
+            <tr>
+                <td>{{ warden.id }}</td>
+                <td>{{ warden.name }}</td>
+                <td>{{ warden.email }}</td>
+                <td>{{ warden.warden_id }}</td>
+                <td>{{ warden.hostel_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('admin_page') }}">Back to Admin Page</a>
+</body>
+</html>
